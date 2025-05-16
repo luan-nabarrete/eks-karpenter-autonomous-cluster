@@ -47,7 +47,7 @@ resource "aws_iam_role_policy_attachment" "coredns_fix" {
 
 resource "aws_lambda_function" "coredns_fix" {
   function_name    = format("%s-coredns-fargate-fix", var.cluster_name)
-  runtime          = "python3.7"
+  runtime          = "python3.10"
   handler          = "main.handler"
   role             = aws_iam_role.coredns_fix.arn
   filename         = data.archive_file.coredns_archive.output_path

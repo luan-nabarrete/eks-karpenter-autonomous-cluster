@@ -1,7 +1,7 @@
 variable "cluster_name" {
   type        = string
   description = "EKS Cluster Name"
-  default     = "karpenter-cluster"
+  default     = "karpenter-eks"
 }
 
 variable "aws_region" {
@@ -13,7 +13,7 @@ variable "aws_region" {
 variable "k8s_version" {
   type        = string
   description = "Default Kubernetes Version"
-  default     = "1.27"
+  default     = "1.32"
 }
 
 variable "default_tags" {
@@ -80,17 +80,17 @@ variable "karpenter_memory_limit" {
 variable "addon_coredns_version" {
   type        = string
   description = "CoreDNS addon version"
-  default     = "v1.10.1-eksbuild.2"
+  default     = "v1.11.4-eksbuild.10"
 }
 
 variable "addon_kubeproxy_version" {
   type        = string
   description = "KubeProxy addon version"  
-  default     = "v1.27.3-eksbuild.2"
+  default     = "v1.32.3-eksbuild.7"
 }
 
 variable "addon_cni_version" {
   type        = string
   description = "VPC CNI addon version"  
-  default     = "v1.12.6-eksbuild.1"
+  default     = "v1.19.5-eksbuild.1"
 }
